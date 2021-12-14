@@ -24,13 +24,13 @@ namespace GP.Domain
         public string Password {
             get { return Password; }
             set {
-                if (value.Length >= 5 && value.Length <= 20) { 
+                    if (value.Length >= 5 && value.Length <= 20) { 
                     Password = value;
-                }
-                else
-                {
+                    }
+                    else
+                    {
                     Console.WriteLine("la taille de MDP doit être enter 5 et 20");
-                }
+                    }
                 } 
         }
         public DateTime DateCreated { get; set; }
@@ -49,16 +49,16 @@ namespace GP.Domain
         {
             P.IsApproved = !P.IsApproved;
         }
-        public static void VerifPassword(string password, string confirmPassword, bool isApproved)
+        public static bool VerifPassword(string password, string confirmPassword, bool isApproved)
         {
             if (password.Equals(confirmPassword))
             {
-                isApproved = true;
+                return isApproved = true;
                 Console.WriteLine("Is approved");
             }
             else
             {
-                isApproved = false;
+                return isApproved = false;
                 Console.WriteLine("Is not approved!!");
             }
         }
