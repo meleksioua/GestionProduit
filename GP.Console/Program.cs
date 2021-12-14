@@ -12,7 +12,11 @@ namespace GP.Console
         static void Main(string[] args)
         {
             Provider P1 = new Provider();
-            
+            Provider.VerifPassword("melek","sioua",P1.IsApproved);
+            Provider.SetIsApproved(P1);
+            System.Console.WriteLine("Approved value: "+ P1.IsApproved);
+            P1.Password = "meleksioua";
+            P1.ConfirmePassword = "melek";
         }
     }
 }
