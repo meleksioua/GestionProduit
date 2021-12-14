@@ -21,5 +21,10 @@ namespace GP.Domain
         {
             throw new NotImplementedException();
         }
+
+        public static void SetIsApproved(Provider P)
+        {
+            P.IsApproved = !P.IsApproved;
+        }
     }
 }
