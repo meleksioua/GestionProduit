@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GP.Domain\GP.Domain.csproj">
+      <Project>{92bd3ef0-39e5-4e04-962e-6e33f3f41eb4}</Project>
+      <Name>GP.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
