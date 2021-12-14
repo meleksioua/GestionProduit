@@ -26,5 +26,16 @@ namespace GP.Domain
         {
             P.IsApproved = !P.IsApproved;
         }
+        public static void VerifPassword(string password, string confirmPassword, bool isApproved)
+        {
+            if (password.Equals(confirmPassword))
+            {
+                isApproved = true;
+            }
+            else
+            {
+                isApproved = false;
+            }
+        }
     }
 }
