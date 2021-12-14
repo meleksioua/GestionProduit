@@ -25,11 +25,11 @@ namespace GP.Domain
             get { return Password; }
             set {
                     if (value.Length >= 5 && value.Length <= 20) { 
-                    Password = value;
+                        Password = value;
                     }
                     else
                     {
-                    Console.WriteLine("la taille de MDP doit être enter 5 et 20");
+                        Console.WriteLine("la taille de MDP doit être enter 5 et 20");
                     }
                 } 
         }
@@ -61,6 +61,15 @@ namespace GP.Domain
                 return isApproved = false;
                 Console.WriteLine("Is not approved!!");
             }
+        }
+
+        public bool Login(string log, string pwd, string email=null) {
+
+            if (UserName.Equals(log) && Password.Equals(pwd) && (Email.Equals(email)||email==null))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
