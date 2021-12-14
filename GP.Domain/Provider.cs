@@ -8,31 +8,35 @@ namespace GP.Domain
 {
     public class Provider:Concept
     {
-        public string ConfirmePassword {
-            get { return ConfirmePassword; }
-            set
-            {
-                if (value.Equals(Password)) {
-                    ConfirmePassword = value;
-                }
-                else
-                {
-                    Console.WriteLine("Il faut confirme MDP");
-                }
-            } 
-        }
-        public string Password {
-            get { return Password; }
-            set {
-                    if (value.Length >= 5 && value.Length <= 20) { 
-                        Password = value;
-                    }
-                    else
-                    {
-                        Console.WriteLine("la taille de MDP doit être enter 5 et 20");
-                    }
-                } 
-        }
+        //public string ConfirmePassword {
+        //    get { return ConfirmePassword; }
+        //    set
+        //    {
+        //        if (value.Equals(Password)) {
+        //            ConfirmePassword = value;
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("Il faut confirme MDP");
+        //        }
+        //    } 
+        //}
+        public string ConfirmePassword { get; set; }
+
+
+        //public string Password {
+        //    get { return Password; }
+        //    set {
+        //            if (value.Length >= 5 && value.Length <= 20) {
+        //                Password = value;
+        //            }
+        //            else
+        //            {
+        //                Console.WriteLine("la taille de MDP doit être enter 5 et 20");
+        //            }
+        //        } 
+        //}
+        public string Password { get; set; }
         public DateTime DateCreated { get; set; }
         public string Email { get; set; }
         public int Id { get; set; }

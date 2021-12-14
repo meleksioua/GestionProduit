@@ -12,11 +12,8 @@ namespace GP.Console
         static void Main(string[] args)
         {
             bool verif,login;
-            Provider P1 = new Provider();
-            P1.UserName = "meleksioua";
-            P1.Email = "meleksioua23@gmailcom";
-            P1.Password = "meleksioua";
-            P1.ConfirmePassword = "meleksioua";
+            Provider P1 = new Provider() { Email="meleksioua23@gmail.com",UserName="meleksioua",Password="meleksioua",ConfirmePassword="meleksioua"};
+            System.Console.WriteLine("Email value: " + P1.Email);
             verif = Provider.VerifPassword(P1.Password,P1.ConfirmePassword,P1.IsApproved);
             //Provider.SetIsApproved(P1);
             if (verif) { 
