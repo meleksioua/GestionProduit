@@ -11,5 +11,10 @@ namespace GP.Domain
         public string City { get; set; }
         public string LabName { get; set; }
         public string StreetAddress { get; set; }
+
+        public override void GetMyType()
+        {
+            Console.WriteLine("CHEMICAL");
+        }
     }
 }

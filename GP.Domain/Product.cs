@@ -21,5 +21,8 @@ namespace GP.Domain
         {
             throw new NotImplementedException();
         }
+        public virtual void GetMyType() {
+            Console.WriteLine("UNKNOWN");
+        }
     }
 }

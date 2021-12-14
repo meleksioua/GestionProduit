@@ -9,5 +9,12 @@ namespace GP.Domain
     public class Biological:Product
     {
         public string Herbs{ get; set; }
+
+        public override void GetMyType()
+        {
+            Console.WriteLine("BIOLOGICAL");
+        }
     }
+
+    
 }

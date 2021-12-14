@@ -21,10 +21,17 @@ namespace GP.Console
             //Provider.SetIsApproved(P1);
             if (verif) { 
                 P1.IsApproved = true;
-            }else
-                P1.IsApproved=false;
+                System.Console.WriteLine("Approved value: " + P1.IsApproved);
 
-            System.Console.WriteLine("Approved value: "+ P1.IsApproved);
+            }
+            else
+            {
+                P1.IsApproved = false;
+                System.Console.WriteLine("Approved value: " + P1.IsApproved);
+
+            }
+
+
             login = P1.Login("meleksioua", "meleksioua");
             if (login) {
                 System.Console.WriteLine("Login Succ");
